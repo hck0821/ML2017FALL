@@ -91,10 +91,10 @@ if args.test:
     print('Generate Feature...', end=' ')
     sys.stdout.flush()
     tStart = time.time()
-    #feat = model.predict(train_x, batch_size=args.batch)
+    feat = model.predict(train_x, batch_size=args.batch)
 
-    pca = PCA(n_components=128).fit(train_x)
-    feat = pca.transform(train_x)
+    #pca = PCA(n_components=128).fit(train_x)
+    #feat = pca.transform(train_x)
     tEnd = time.time()
     print('cost %s' % tfmt(tEnd-tStart))
     

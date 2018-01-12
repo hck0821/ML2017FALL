@@ -51,7 +51,7 @@ for i in range(4):
 
 'reconstruct'
 'Problem3'
-img = io.imread(os.path.join(sys.argv[1], sys.argv[2]).reshape(1, -1).astype(np.float64)
+img = io.imread(os.path.join(sys.argv[1], sys.argv[2])).reshape(1, -1).astype(np.float64)
 img = img - avg_img
 w = np.dot(img, V[:4].T).flatten()
 recon_img = np.sum([w[i] * V[i] for i in range(len(w))], axis=0, dtype=np.float64)
